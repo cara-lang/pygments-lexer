@@ -50,19 +50,20 @@ class CaraLexer(RegexLexer):
         'case',
         'else',
         'if',
-        'of',
-        'then', 'type',
-        'where',
+        'module',
+        'of', 'opaque',
+        'private',
+        'test', 'then', 'type',
+        'where', 'with',
     ), suffix=r'\b')
 
     tokens = {
         'root': [
 
-            # TODO shebang
-
             # Comments
             (r'/\*', Comment.Multiline, 'comment'),
             (r'//.*', Comment.Single),
+            (r'#!.*', Comment.Single),
 
             # Whitespace
             (r'\s+', Whitespace),
