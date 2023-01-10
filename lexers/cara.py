@@ -48,7 +48,7 @@ class CaraLexer(RegexLexer):
     reservedWords = words((
         'alias', 'as',
         'case',
-        'else',
+        'else', 'extend',
         'if',
         'module',
         'of', 'opaque',
